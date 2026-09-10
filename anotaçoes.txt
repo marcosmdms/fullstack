@@ -10,6 +10,9 @@ JSON — converter e manipular JSON.
 RegExp — expressões regulares.
 Set — coleção de valores únicos.
 Map — coleção de pares chave/valor.
+----
+prompt() → recebe entrada
+alert() → mostra mensagem
 
 -----------------------------------------------
 

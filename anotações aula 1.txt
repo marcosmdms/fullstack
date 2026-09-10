@@ -1,0 +1,7 @@
+Tipos de dados podem ser :
+
+* Primitivos
+* Complexos
+
+String -> "", '', ``
+Number -> Numeros
