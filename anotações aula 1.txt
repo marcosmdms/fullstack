@@ -8,12 +8,18 @@ Tipos de dados podem ser :
 string	-> "Olá" - ("",'',``)
 number	-> 42, 3.14
 boolean	-> true, false
-undefined -> undefined
-null	-> null
+undefined → "não foi definido"
+null      → "foi definido como vazio"
+
+** explicação undefined e null **
+
+undefined -> undefined (uma variável foi declarada, mas ainda não recebeu um valor.)
+** Pense em undefined como: "Não foi definido nenhum valor."
+-
+null	-> null (é um valor que você atribui propositalmente para indicar que não existe nenhum valor.)
+** Pense em null como: "Eu defini que não existe um valor aqui."
+
 --
-bigint	-> 123n
-symbol	-> Symbol("id")
-infinity
 
 #Exemplos:
 
@@ -22,8 +28,7 @@ const idade = 30;           // number
 const ativo = true;         // boolean
 let valor;                  // undefined
 const vazio = null;         // null
-const grande = 123n;        // bigint
-const id = Symbol("id");    // symbol
+
 
 ---------------------------------------------------------------------------
 
@@ -39,5 +44,6 @@ Set
 RegExp
 Function
 -------------------------------------------------------------------------
-** Regra prática: primitivo guarda um valor simples; 
-objeto pode guardar uma coleção/estrutura de valores e comportamentos. **
+
+** Variáveis **
+
