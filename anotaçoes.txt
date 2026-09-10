@@ -1,0 +1,12 @@
+** objetos nativos mais usados no JavaScript **
+
+Object — manipulação de objetos.
+Array — listas e coleções.
+String — manipulação de textos.
+Number — números e operações numéricas.
+Math — cálculos matemáticos.
+Date — datas e horários.
+JSON — converter e manipular JSON.
+RegExp — expressões regulares.
+Set — coleção de valores únicos.
+Map — coleção de pares chave/valor.
