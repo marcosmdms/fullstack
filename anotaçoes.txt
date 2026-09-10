@@ -10,3 +10,126 @@ JSON — converter e manipular JSON.
 RegExp — expressões regulares.
 Set — coleção de valores únicos.
 Map — coleção de pares chave/valor.
+
+-----------------------------------------------
+
+Se seu objetivo é aprender JavaScript para trabalhar profissionalmente com sites e aplicações web, eu estudaria nesta ordem:
+
+🟢 1. Fundamentos — indispensável
+let, const e variáveis
+Tipos de dados: string, number, boolean, null, undefined
+Operadores: +, -, *, /, ===, !==, >, <
+if / else
+switch
+for, while
+Funções
+return
+Escopo
+🟡 2. Estruturas de dados
+Arrays
+Objetos
+Desestruturação
+Spread ...
+Métodos de array:
+map()
+filter()
+find()
+reduce()
+forEach()
+includes()
+🟠 3. DOM — MUITO importante para sites
+
+Aprender a controlar o HTML pelo JavaScript:
+
+document.querySelector()
+document.querySelectorAll()
+element.textContent
+element.innerHTML
+element.classList.add()
+element.classList.remove()
+
+E principalmente eventos:
+
+element.addEventListener()
+
+Exemplo:
+
+const botao = document.querySelector('button');
+
+botao.addEventListener('click', () => {
+  console.log('Clicou!');
+});
+🔵 4. JavaScript moderno
+
+Aprenda:
+
+Arrow functions =>
+Template literals `${}`
+Destructuring
+Spread/rest ...
+Optional chaining ?.
+Nullish coalescing ??
+import / export
+🔴 5. Assíncrono — essencial no trabalho
+Promise
+async
+await
+fetch()
+APIs
+try / catch
+
+Exemplo:
+
+async function buscarDados() {
+  try {
+    const resposta = await fetch('https://api.exemplo.com');
+    const dados = await resposta.json();
+
+    console.log(dados);
+  } catch (erro) {
+    console.log(erro);
+  }
+}
+🟣 6. Objetos nativos que você mais vai usar
+Array
+Object
+String
+Number
+Math
+Date
+JSON
+Set
+Map
+⚫ 7. Ferramentas de trabalho
+
+Depois dos fundamentos:
+
+Git + GitHub
+VS Code
+NPM
+package.json
+Node.js
+DevTools do navegador
+Debugging
+ESLint / Prettier
+🚀 8. Depois disso: mercado
+
+Quando essa base estiver confortável, você pode partir para:
+
+Frontend:
+
+React
+Vue
+Angular
+
+Backend:
+
+Node.js
+Express
+APIs
+Banco de dados
+📌 Se eu estivesse começando hoje
+
+Eu seguiria esta sequência:
+
+JavaScript básico → Funções → Arrays/Objetos → DOM → Eventos → JS moderno → Async/Await → Fetch/APIs → Git/GitHub → Node/React
