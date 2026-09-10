@@ -1,3 +1,5 @@
+https://www.typescriptlang.org/pt/play/?#code/PTAEEEFcBsENQIwCgDGB7AdgZwC6g2gLYCmoAvKAA4BORlOAFAAYAiAlgOZs6mSH5FiALiYBKANxIksaMWqMmAeQElQAE07dYatKABmaNkNAASAN4ESAXzGSgA
+
 Tipos de dados podem ser :
 
 * Primitivos: Primitivo guarda um valor simples
@@ -31,6 +33,24 @@ const vazio = null;         // null
 
 
 ---------------------------------------------------------------------------
+** Variáveis **
+
+var (palavra reservada da linguagem javaScript, que é utilizada para criar uma variavel.
+dDve ser sucedida de um nome. a isso chamamos de dleclarar uma variável)
+
+** exemplo de declaração de variavel
+
+var username;
+
+** exemplo de atribuição de valor a variável
+
+var username = 'nome do usuário';
+
+** exemplo de forma mais usada de criação e atribuição de valor a variável
+
+var age = 30;
+
+
 
 ** TIPOS Complexos
 
