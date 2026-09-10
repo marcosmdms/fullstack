@@ -1,7 +1,43 @@
 Tipos de dados podem ser :
 
-* Primitivos
-* Complexos
+* Primitivos: Primitivo guarda um valor simples
+* Complexos:  Pode guardar uma coleção/estrutura de valores e comportamentos.
 
-String -> "", '', ``
-Number -> Numeros
+** TIPOS PRIMITIVOS
+
+string	-> "Olá" - ("",'',``)
+number	-> 42, 3.14
+boolean	-> true, false
+undefined -> undefined
+null	-> null
+--
+bigint	-> 123n
+symbol	-> Symbol("id")
+infinity
+
+#Exemplos:
+
+const nome = "Marcos";      // string
+const idade = 30;           // number
+const ativo = true;         // boolean
+let valor;                  // undefined
+const vazio = null;         // null
+const grande = 123n;        // bigint
+const id = Symbol("id");    // symbol
+
+---------------------------------------------------------------------------
+
+** TIPOS Complexos
+
+Object (principal)
+
+**objetos especializados**
+Array
+Date
+Map
+Set
+RegExp
+Function
+-------------------------------------------------------------------------
+** Regra prática: primitivo guarda um valor simples; 
+objeto pode guardar uma coleção/estrutura de valores e comportamentos. **
