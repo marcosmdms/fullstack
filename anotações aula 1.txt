@@ -49,9 +49,10 @@ var username = 'nome do usuário';
 ** exemplo de forma mais usada de criação e atribuição de valor a variável
 
 var age = 30;
+-----------------------------------------
+foi visto, bloco {}, const, let, alert, prompt também.
 
-
-
+-----------------------------------------
 ** TIPOS Complexos
 
 Object (principal)
