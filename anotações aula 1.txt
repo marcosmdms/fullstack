@@ -1,5 +1,8 @@
 https://www.typescriptlang.org/pt/play/?#code/PTAEEEFcBsENQIwCgDGB7AdgZwC6g2gLYCmoAvKAA4BORlOAFAAYAiAlgOZs6mSH5FiALiYBKANxIksaMWqMmAeQElQAE07dYatKABmaNkNAASAN4ESAXzGSgA
 
+https://dontpad.com/gtfs02sul
+
+----------------------------------------
 Tipos de dados podem ser :
 
 * Primitivos: Primitivo guarda um valor simples
