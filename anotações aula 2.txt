@@ -25,8 +25,29 @@ ________
     ** == (comparação) -> compara somente valores
     ** === (comparação extricta) -> compara valor e tipo
     ** Dica do professor: usar sempre o (===) para fazer as comparações
- - atribuição
- - lógicos
+____________
+ - atribuição ()
+    Exemplo:
+    let x = 10;
+    x += 5;  // 15
+    x -= 3;  // 12
+    x *= 2;  // 24
+    x /= 4;  // 6
+    x %= 4;  // 2
+    x **= 3; // 8
+-----------Existem também operadores de atribuição bit a bit
+    &=
+    |=
+    ^=
+    <<=
+    >>=
+    >>>=
+-------- operadores de atribuição lógica:
+    &&= 
+    ||=
+    ??=
+____________
+ - lógicos (&& (and), || (or), ! (not))
 
 % - modulo ou rest ( divide o numero da esquerda pelo da direita e mostra o resto da divisão)
 é utilizado para saber se é par ou importante
