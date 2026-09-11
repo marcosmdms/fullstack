@@ -50,9 +50,22 @@ ____________
  - lógicos (&& (and), || (or), ! (not))
 
 Expressão booleana
- const expression = true ? 'é verdade' : 'é mentira'; (equivale ao ifelse)
-    -> ? - equivale ao se (if)
-    -> : - equivale ao senão (else)
+ const expression = true ? 'é verdade' : 'é mentira'; (equivale ao elseIf)
+    -> ? - equivale ao SE (if)
+    -> : - equivale ao SENÂO (else)
+
+________
+
+Estruturas condicionais
+ - Estrutura de controle de fluxo (decisão)
+    ** se sim / se não
+if (){}
+
+_______________
+** O que o JS considera verdade ou mentira **
+
+thuthy (tudo que for diferente de mentira, é verdade)
+falsy (" " (string vazia), null, false,0, undefined)
 
 _____________________________________
 JS -> Dinâmica
