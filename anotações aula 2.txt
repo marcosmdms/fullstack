@@ -33,28 +33,28 @@ ____________
     x -= 3;  // 12
     x *= 2;  // 24
     x /= 4;  // 6
-    x %= 4;  // 2
-    x **= 3; // 8
------------Existem também operadores de atribuição bit a bit
+    x %= 4;  // 2 (nao foi abordado pelo professor)
+    x **= 3; // 8 (nao foi abordado pelo professor)
+-----------Existem também operadores de atribuição bit a bit (nao foi abordado pelo professor)
     &=
     |=
     ^=
     <<=
     >>=
     >>>=
--------- operadores de atribuição lógica:
+-------- operadores de atribuição lógica: (nao foi abordado pelo professor)
     &&= 
     ||=
     ??=
 ____________
  - lógicos (&& (and), || (or), ! (not))
 
-% - modulo ou rest ( divide o numero da esquerda pelo da direita e mostra o resto da divisão)
-é utilizado para saber se é par ou importante
-se restar 0 é par
-se diferente de 0 é impar
+Expressão booleana
+ const expression = true ? 'é verdade' : 'é mentira'; (equivale ao ifelse)
+    -> ? - equivale ao se (if)
+    -> : - equivale ao senão (else)
 
-
+_____________________________________
 JS -> Dinâmica
 Exemplo:
 let valor = 10;
