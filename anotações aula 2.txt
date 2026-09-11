@@ -4,10 +4,27 @@ aula 2
 2. união (uso do | para adicionais mais tipos)
 3. Inferencia: implicita ou explicita
     **tranformar o que vem do prompt em number
+    ** typeof (mostra qual  o tipo da informação armazenada ou recebida)
 4. Concatenação de texto (string + variavel)
 5. Operadores:
- - aritimeticos
- - comparação
+ - aritimeticos (+,-,*, /, %)
+_________
+ % - modulo ou rest ( divide o numero da esquerda pelo da direita e mostra o resto da divisão)
+é utilizado para saber se é par ou importante
+se restar 0 é par
+se diferente de 0 é impar
+________
+    
+    ** coerção implicita -> alert('30'-5) -> 25
+    ** coerção explicita -> (number, string, boolean)
+        number ('30')
+        String (false)
+        boolean('true')
+________
+ - comparação ( >, <, >=, <=, ==, ===)
+    ** == (comparação) -> compara somente valores
+    ** === (comparação extricta) -> compara valor e tipo
+    ** Dica do professor: usar sempre o (===) para fazer as comparações
  - atribuição
  - lógicos
 
