@@ -1,10 +1,21 @@
 aula 2
 
-Tipagem Dinâmica vs Tipagem Estática
-união (uso do | para adicionais mais tipos)
-Inferencia: implicita ou explicita
-Concatenação de texto (string)
-**tranformar o que vem do prompt em number
+1. Tipagem Dinâmica vs Tipagem Estática
+2. união (uso do | para adicionais mais tipos)
+3. Inferencia: implicita ou explicita
+    **tranformar o que vem do prompt em number
+4. Concatenação de texto (string + variavel)
+5. Operadores:
+ - aritimeticos
+ - comparação
+ - atribuição
+ - lógicos
+
+% - modulo ou rest ( divide o numero da esquerda pelo da direita e mostra o resto da divisão)
+é utilizado para saber se é par ou importante
+se restar 0 é par
+se diferente de 0 é impar
+
 
 JS -> Dinâmica
 Exemplo:
