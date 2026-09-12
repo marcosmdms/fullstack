@@ -1,6 +1,21 @@
 aula 2
 
 1. Tipagem Dinâmica vs Tipagem Estática
+JS -> Dinâmica
+Exemplo:
+let valor = 10;
+valor = "Olá";
+valor = true;
+
+TS -> Estática
+
+Exemplo:
+let valor: number = 10;
+
+valor = 20;      // ✅
+valor = "Olá";   // ❌ erro
+
+
 2. união (uso do | para adicionais mais tipos)
 3. Inferencia: implicita ou explicita
     **tranformar o que vem do prompt em number
@@ -68,19 +83,4 @@ thuthy (tudo que for diferente de mentira, é verdade)
 falsy (" " (string vazia), null, false,0, undefined)
 
 _____________________________________
-JS -> Dinâmica
-Exemplo:
-let valor = 10;
-valor = "Olá";
-valor = true;
 
-TS -> Estática
-
-Exemplo:
-let valor: number = 10;
-
-valor = 20;      // ✅
-valor = "Olá";   // ❌ erro
-
-
-uma variavel que possui valor inicial
