@@ -3,7 +3,7 @@
 Object — manipulação de objetos.
 Array — listas e coleções.
 String — manipulação de textos.
-Number — números e operações numéricas.
+Number — números e operações. OK
 Math — cálculos matemáticos.
 Date — datas e horários.
 JSON — converter e manipular JSON.
@@ -11,8 +11,8 @@ RegExp — expressões regulares.
 Set — coleção de valores únicos.
 Map — coleção de pares chave/valor.
 ----
-prompt() → recebe entrada
-alert() → mostra mensagem
+prompt() → recebe entrada OK
+alert() → mostra mensagem OK
 
 -----------------------------------------------
 
@@ -97,7 +97,7 @@ async function buscarDados() {
 Array
 Object
 String
-Number
+Number ok
 Math
 Date
 JSON
