@@ -1,0 +1,4 @@
+# Estruturas condicionais
+ -  Operador ternário
+ - Se (if) - executa o bloco caso a expressão retorne "false" ou seja considerado "thruthy".
+ "falsy" -> 0, "",false, null,undefined
