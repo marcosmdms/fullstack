@@ -10,21 +10,53 @@ const utility = {
         alert('operação cancelada.');
         return;
     },
-    parse: function () { }
+    parse: function (value: string | any)  { 
+        if(value === ''){alert('Informe um valor:');
+        
+        return false;
+        } else if (!(value > 0)){
+            alert('Digite um valor válido');
+            
+            return false;
+        }
+        return true;
+    }
 }
 
 const operations = {
     check: function () { alert(`Saldo atual: R$ ${balance}`); },
     deposit: function () {
-        const value = prompt('Digite o valor do depósito:');
-        if (value === null) {
+        const amount = prompt('Digite o valor do depósito:');
+        if (amount === null) {
             const response = utility.cancel();
-            if (response === false) { operations.deposit(); }
+            if (!response) { operations.deposit(); }
+            return;
         }
 
-
+        const parsed = utility.parse(amount);
+        if(!parsed){ operations.deposit();}
+        balance += +amount;
+        operations.check();
     },
-    cashout: function () { alert('Sacar'); },
+    cashout: function () { 
+        const amount = prompt('Digite o valor do saque:');
+        if (amount === null) {
+            const response = utility.cancel();
+            if (!response) { operations.cashout(); }
+            return;
+        }
+        const parsed = utility.parse(amount);
+
+        if(!parsed){ operations.cashout();}
+        
+        if(+amount > balance){
+            alert('Saldo insuficiente.');
+            operations.cashout();
+            return;
+        }
+        balance -= +amount;
+        operations.check();
+    },
     exit: function exit() { alert('foi um prazer atendê-lo'); repeat = false; },
     invalid: function () { alert('Operação inválida'); },
 
