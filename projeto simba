@@ -7,7 +7,7 @@ const utility = {
     const response = confirm("Deseja realmente cancelar?");
 
     if (!response) return response;
-    
+
     alert("Operação cancelada.");
     return response;
   },
@@ -58,7 +58,7 @@ const operations = {
       const response = utility.cancel();
 
       if (!response) operations.cashout();
-      
+
       return;
     }
 
@@ -69,7 +69,6 @@ const operations = {
     if (+amount > balance) {
       alert("Saldo insuficiente.");
       return operations.cashout();
-      
     }
 
     balance -= +amount;
@@ -81,6 +80,13 @@ const operations = {
     };
   },
   statement: function () {
+    let message = "Extrato\n\n";
+    
+    for (let i = 0; i < statement.length; i++) {
+      message += statement[i].operation + ": R$ " + statement[i].amount +"\n";
+    }
+
+    alert(message);
 
   },
   exit: function () {
