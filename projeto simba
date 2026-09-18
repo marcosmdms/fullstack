@@ -1,4 +1,4 @@
-let repeat = true;
+let repeat = true; 
 let balance = 0;
 const statement: { operation: "Depósito" | "Saque"; amount: number }[] = [];
 
