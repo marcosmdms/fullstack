@@ -1,5 +1,3 @@
-// Simba
-
 let repeat = true;
 let balance = 0;
 const statement: { operation: "Depósito" | "Saque"; amount: number }[] = [];
@@ -10,7 +8,6 @@ const utility = {
 
     if (!response) return response;
     
-
     alert("Operação cancelada.");
     return response;
   },
@@ -84,7 +81,6 @@ const operations = {
     };
   },
   statement: function () {
-
 
   },
   exit: function () {
