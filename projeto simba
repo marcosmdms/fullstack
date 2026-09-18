@@ -103,7 +103,8 @@ function run() {
     return;
   }
 
-  const parseName = username ? username : "usuário";
+  //const parseName = username ? username : "usuário";
+  const parseName = username || "usuário";
 
   alert("Olá, " + parseName + "! Bem vindo ao Simba.");
 
