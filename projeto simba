@@ -89,7 +89,7 @@ const operations = {
     let message = "Extrato\n\n";
     
     for (let i = 0; i < statement.length; i++) {
-      message += statement[i].operation + ": R$ " + statement[i].amount +"\n";
+      message += statement[i].operation + ": R$ " + statement[i].amount + " | saldo: R$" + statement[i].balance+"\n";
     }
 
     alert(message);
