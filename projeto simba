@@ -82,6 +82,7 @@ const operations = {
     statement[statement.length] = {
       operation: "Saque",
       amount: +amount,
+      balance
     };
   },
   statement: function () {
