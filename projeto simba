@@ -8,12 +8,11 @@ const utility = {
   cancel: function () {
     const response = confirm("Deseja realmente cancelar?");
 
-    if (!response) {
-      return false;
-    }
+    if (!response) return response;
+    
 
     alert("Operação cancelada.");
-    return true;
+    return response;
   },
   parse: function (value: string | any) {
     if (value === "") {
@@ -32,24 +31,20 @@ const operations = {
   check: function () {
     alert("Saldo atual: R$ " + balance);
   },
-  deposit: function () {
+  deposit: function (): void {
     const amount = prompt("Digite o valor do depósito:");
 
     if (amount === null) {
       const response = utility.cancel();
 
-      if (!response) {
-        operations.deposit();
-      }
+      if (!response) operations.deposit();
 
       return;
     }
 
     const parsed = utility.parse(amount);
 
-    if (!parsed) {
-      operations.deposit();
-    }
+    if (!parsed) operations.deposit();
 
     balance += +amount;
     operations.check();
@@ -59,29 +54,25 @@ const operations = {
       amount: +amount,
     };
   },
-  cashout: function () {
+  cashout: function (): void {
     const amount = prompt("Digite o valor do saque:");
 
     if (amount === null) {
       const response = utility.cancel();
 
-      if (!response) {
-        operations.cashout();
-      }
-
+      if (!response) operations.cashout();
+      
       return;
     }
 
     const parsed = utility.parse(amount);
 
-    if (!parsed) {
-      operations.cashout();
-    }
+    if (!parsed) operations.cashout();
 
     if (+amount > balance) {
       alert("Saldo insuficiente.");
-      operations.cashout();
-      return;
+      return operations.cashout();
+      
     }
 
     balance -= +amount;
@@ -94,7 +85,7 @@ const operations = {
   },
   statement: function () {
 
-    
+
   },
   exit: function () {
     alert("Foi um prazer atendê-lo.");
@@ -111,9 +102,7 @@ function run() {
   if (username === null) {
     const response = utility.cancel();
 
-    if (response === false) {
-      run();
-    }
+    if (response === false) run();
 
     return;
   }
@@ -130,18 +119,14 @@ function run() {
     if (operation === null) {
       const response = utility.cancel();
 
-      if (!response) {
-        continue;
-      }
+      if (!response) continue;
 
       return;
     }
 
     const parsed = utility.parse(operation);
 
-    if (!parsed) {
-      continue;
-    }
+    if (!parsed) continue;
 
     switch (+operation) {
       case 1:
