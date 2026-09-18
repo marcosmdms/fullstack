@@ -121,27 +121,31 @@ function run() {
 
     while (repeat) {
         const operation = prompt('Selecione uma operação:\n\n1. Consultar\n2. Depositar\n3. Sacar\n4. Extrato\n5. Sair\n');
+       
+    if (operation === null) {
+        const response = utility.cancel();
 
-        if (operation === '') {
-            alert('Selecione uma das operações.');
-            continue;
-        } else if (operation !== null) {
-            const parsed = +operation;
-
-            switch (parsed) {
-                case 1: operations.check(); break;
-                case 2: operations.deposit(); break;
-                case 3: operations.cashout(); break;
-                case 4: operations.statement(); break;
-                case 5: operations.exit(); break;
-                default: operations.invalid();
-            }
-
+        if (!response) {
             continue;
         }
+        
+        return;
+    }
 
-        alert('Operação cancelada.');
-        repeat = false;
+    const parsed = utility.parse(operation);
+
+    if(!parsed){ continue;}
+
+     switch (+operation) {
+        case 1: operations.check(); break;
+        case 2: operations.deposit(); break;
+        case 3: operations.cashout(); break;
+        case 4: operations.statement(); break;
+        case 5: operations.exit(); break;
+        default: operations.invalid();
+    }
+
+        
     }
 }
 
