@@ -1,6 +1,10 @@
 let repeat = true; 
 let balance = 0;
-const statement: { operation: "Depósito" | "Saque"; amount: number }[] = [];
+const statement: { 
+    operation: "Depósito" | "Saque", 
+    amount: number,
+    balance: number,
+}[] = [];
 
 const utility = {
   cancel: function () {
@@ -49,6 +53,7 @@ const operations = {
     statement[statement.length] = {
       operation: "Depósito",
       amount: +amount,
+      balance
     };
   },
   cashout: function (): void {
