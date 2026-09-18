@@ -2,153 +2,167 @@
 
 let repeat = true;
 let balance = 0;
-const statement: { operation: 'Depósito' | 'Saque', amount: number }[] = [];
+const statement: { operation: "Depósito" | "Saque"; amount: number }[] = [];
 
 const utility = {
-    cancel: function () {
-        const response = confirm('Deseja realmente cancelar?');
+  cancel: function () {
+    const response = confirm("Deseja realmente cancelar?");
 
-        if (!response) {
-            return false;
-        }
+    if (!response) {
+      return false;
+    }
 
-        alert('Operação cancelada.');
-        return true;
-    },
-    parse: function (value: string | any) {
-        if (value === '') {
-            alert('Informe um valor.');
-            return false;
-        } else if (!(value > 0)) {
-            alert('Digite um valor válido.');
-            return false;
-        }
+    alert("Operação cancelada.");
+    return true;
+  },
+  parse: function (value: string | any) {
+    if (value === "") {
+      alert("Informe um valor.");
+      return false;
+    } else if (!(value > 0)) {
+      alert("Digite um valor válido.");
+      return false;
+    }
 
-        return true;
-    },
+    return true;
+  },
 };
 
 const operations = {
-    check: function () {
-        alert('Saldo atual: R$ ' + balance);
-    },
-    deposit: function () {
-        const amount = prompt('Digite o valor do depósito:');
+  check: function () {
+    alert("Saldo atual: R$ " + balance);
+  },
+  deposit: function () {
+    const amount = prompt("Digite o valor do depósito:");
 
-        if (amount === null) {
-            const response = utility.cancel();
+    if (amount === null) {
+      const response = utility.cancel();
 
-            if (!response) {
-                operations.deposit();
-            }
+      if (!response) {
+        operations.deposit();
+      }
 
-            return;
-        }
-
-        const parsed = utility.parse(amount);
-
-        if (!parsed) {
-            operations.deposit();
-        }
-
-        balance += +amount;
-        operations.check();
-
-        statement[statement.length] = {
-            operation: 'Depósito',
-            amount: +amount
-        };
-    },
-    cashout: function () {
-        const amount = prompt('Digite o valor do saque:');
-
-        if (amount === null) {
-            const response = utility.cancel();
-
-            if (!response) {
-                operations.cashout();
-            }
-
-            return;
-        }
-
-        const parsed = utility.parse(amount);
-
-        if (!parsed) {
-            operations.cashout();
-        }
-
-        if (+amount > balance) {
-            alert('Saldo insuficiente.');
-            operations.cashout();
-            return;
-        }
-
-        balance -= +amount;
-        operations.check();
-
-        statement[statement.length] = {
-            operation: 'Saque',
-            amount: +amount
-        };
-    },
-    statement: function () {},
-    exit: function () {
-        alert('Foi um prazer atendê-lo.');
-        repeat = false;
-    },
-    invalid: function () {
-        alert('Operação inválida.');
+      return;
     }
+
+    const parsed = utility.parse(amount);
+
+    if (!parsed) {
+      operations.deposit();
+    }
+
+    balance += +amount;
+    operations.check();
+
+    statement[statement.length] = {
+      operation: "Depósito",
+      amount: +amount,
+    };
+  },
+  cashout: function () {
+    const amount = prompt("Digite o valor do saque:");
+
+    if (amount === null) {
+      const response = utility.cancel();
+
+      if (!response) {
+        operations.cashout();
+      }
+
+      return;
+    }
+
+    const parsed = utility.parse(amount);
+
+    if (!parsed) {
+      operations.cashout();
+    }
+
+    if (+amount > balance) {
+      alert("Saldo insuficiente.");
+      operations.cashout();
+      return;
+    }
+
+    balance -= +amount;
+    operations.check();
+
+    statement[statement.length] = {
+      operation: "Saque",
+      amount: +amount,
+    };
+  },
+  statement: function () {
+
+    
+  },
+  exit: function () {
+    alert("Foi um prazer atendê-lo.");
+    repeat = false;
+  },
+  invalid: function () {
+    alert("Operação inválida.");
+  },
 };
 
 function run() {
-    const username = prompt('Digite seu nome:');
+  const username = prompt("Digite seu nome:");
 
-    if (username === null) {
-        const response = utility.cancel();
+  if (username === null) {
+    const response = utility.cancel();
 
-        if (response === false) {
-            run();
-        }
-
-        return;
+    if (response === false) {
+      run();
     }
 
-    const parseName = username ? username : 'usuário';
+    return;
+  }
 
-    alert('Olá, ' + parseName + '! Bem vindo ao Simba.');
+  const parseName = username ? username : "usuário";
 
-    while (repeat) {
-        const operation = prompt('Selecione uma operação:\n\n1. Consultar\n2. Depositar\n3. Sacar\n4. Extrato\n5. Sair\n');
-       
+  alert("Olá, " + parseName + "! Bem vindo ao Simba.");
+
+  while (repeat) {
+    const operation = prompt(
+      "Selecione uma operação:\n\n1. Consultar\n2. Depositar\n3. Sacar\n4. Extrato\n5. Sair\n"
+    );
+
     if (operation === null) {
-        const response = utility.cancel();
+      const response = utility.cancel();
 
-        if (!response) {
-            continue;
-        }
-        
-        return;
+      if (!response) {
+        continue;
+      }
+
+      return;
     }
 
     const parsed = utility.parse(operation);
 
-    if(!parsed){ continue;}
-
-     switch (+operation) {
-        case 1: operations.check(); break;
-        case 2: operations.deposit(); break;
-        case 3: operations.cashout(); break;
-        case 4: operations.statement(); break;
-        case 5: operations.exit(); break;
-        default: operations.invalid();
+    if (!parsed) {
+      continue;
     }
 
-        
+    switch (+operation) {
+      case 1:
+        operations.check();
+        break;
+      case 2:
+        operations.deposit();
+        break;
+      case 3:
+        operations.cashout();
+        break;
+      case 4:
+        operations.statement();
+        break;
+      case 5:
+        operations.exit();
+        break;
+      default:
+        operations.invalid();
     }
+  }
 }
 
 run();
-
-
