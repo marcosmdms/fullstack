@@ -14,12 +14,24 @@
  - opção (como eu quero executar)
 
 * lista de comandos 
-ls      → Get-ChildItem
-dir     → Get-ChildItem
-cd      → Set-Location
-pwd     → Get-Location
-cls     → Clear-Host
-cat     → Get-Content
-cp      → Copy-Item
-mv      → Move-Item
-rm      → Remove-Item
+ls      → Get-ChildItem - lista
+dir     → Get-ChildItem - 
+cd      → Set-Location - * 
+//--------------------------------------------------------------
+cd pasta     → entra na pasta
+cd ..        → volta 1 nível
+cd ../..     → volta 2 níveis
+cd \         → vai para a raiz do drive atual
+cd ~         → vai para a pasta do usuário
+cd -         → volta para a localização anterior
+cd C:\       → vai para C:\ 
+D:           → muda para o drive D:
+cd D:\       → vai para a raiz do drive D:
+//--------------------------------------------------------------
+
+pwd     → Get-Location - localização atual
+cls     → Clear-Host - limpar (clear)
+cat     → Get-Content - 
+cp      → Copy-Item - 
+mv      → Move-Item - 
+rm      → Remove-Item - 
