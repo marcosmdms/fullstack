@@ -1,9 +1,9 @@
-let repeat = true; 
+let repeat = true;
 let balance = 0;
-const statement: { 
-    operation: "Depósito" | "Saque", 
-    amount: number,
-    balance: number,
+const statement: {
+  operation: "Depósito" | "Saque";
+  amount: number;
+  balance: number;
 }[] = [];
 
 const utility = {
@@ -53,7 +53,7 @@ const operations = {
     statement[statement.length] = {
       operation: "Depósito",
       amount: +amount,
-      balance
+      balance,
     };
   },
   cashout: function (): void {
@@ -82,18 +82,23 @@ const operations = {
     statement[statement.length] = {
       operation: "Saque",
       amount: +amount,
-      balance
+      balance,
     };
   },
   statement: function () {
     let message = "Extrato\n\n";
-    
+
     for (let i = 0; i < statement.length; i++) {
-      message += statement[i].operation + ": R$ " + statement[i].amount + " | saldo: R$" + statement[i].balance+"\n";
+      message +=
+        statement[i].operation +
+        ": R$ " +
+        statement[i].amount +
+        " | saldo: R$" +
+        statement[i].balance +
+        "\n";
     }
 
     alert(message);
-
   },
   exit: function () {
     alert("Foi um prazer atendê-lo.");
