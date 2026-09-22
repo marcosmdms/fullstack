@@ -6,6 +6,7 @@ commit
 log
 branch
 remote
+push
 --------------------------------------------
 Linha do tempo -> Branch
 (main)
