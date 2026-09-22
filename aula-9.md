@@ -2,6 +2,10 @@ init
 config
 status
 add
+commit
+log
+branch
+remote
 --------------------------------------------
 Linha do tempo -> Branch
 (main)
