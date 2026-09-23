@@ -1,4 +1,8 @@
 # GEFINA
+*sistema de gestão de contas a receber*
+
+serão 6 etapas (sprints) para a construção, cada entrega termina com uma versão publicada e funcional do sistema.
+deverá ser acessível por endereço publico.
 
 interface responsiva.
 
@@ -36,3 +40,14 @@ cad
 * somente quem criou a fatura pode 
 
 * pode alterar o adm do cliente
+
+-----------------------------
+o sistema obedecerá as boas praticas do cliclo de desenvolvimento
+# ciclo de desenvolvimento
+
+- levantamento de requisitos
+- protiotipação
+- modelagem
+- desenvolvimento
+- qualidade
+- homologação
