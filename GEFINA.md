@@ -51,3 +51,37 @@ o sistema obedecerá as boas praticas do cliclo de desenvolvimento
 - desenvolvimento
 - qualidade
 - homologação
+
+-
+dominio: O Sistema
+-----------------------------------
+requisito funcional: ponto de vista de quem utiliza o sistema. (não preciso de informações tecnicas para entender)
+requisito não funcional: detalhes tecnicos de formatação. ex: linguagem, validação de caracteres, tipos de upload etc.
+-----------------------------------
+
+# Entidades
+algo do dominio que eu preciso armazenar
+*ex:*
+- usuarios
+- faturas
+- clientes
+-
+----------------------------
+# Atributos
+
+* usuarios
+- nome
+- email
+- senha
+- papel (tipo de usuário)
+
+* clientes
+- nome
+- endereço
+- imagem (não obrigatorio)
+
+* faturas
+- valor
+- situação (pendente, paga, atrasada)
+- data de emissão
+- data de vencimento
