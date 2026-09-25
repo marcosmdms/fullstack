@@ -85,3 +85,64 @@ algo do dominio que eu preciso armazenar
 - situação (pendente, paga, atrasada)
 - data de emissão
 - data de vencimento
+-
+------------------------------------------------------
+Relacionamento e cardinalidade
+
+* relacionamento
+*associação entre uma entidade e outra*
+
+* Cardinalidade
+*quantidade de ocorrencias de cadas lado da associação*
+---------------------------------------------
+usuarios - clientes
+clientes - faturas
+1 : N
+--------------------------------------------
+
+# Regras de Negócio
+*são regras relacionadas so dominio (sistema)*
+ex:
+- nao pode cadastrar fatura zerada
+- não podera ter dois clientes com o mesmo email
+- data de vencimento nao antecede uma data de emissão
+- toda fatura criada, sera como pendente, mesmo que ja tenha sido paga, devera ser criada e
+após sera dado baixa
+
+--------------------------------------------------
+
+# dado armazenado e dado derivado
+armazenado : registrado no banco
+derivado: que atendendo a regra de nogociogerado, é gerado pela logica e 
+
+-------------------------------------
+
+# comportamento observável
+- tudo o que pode ser observado pelo cliente que coresponde ao esperado por ele
+
+- uma task precisa descrever algo que é esperado de forma observável
+
+-------------------------------------------
+
+# Release
+disponibilização de etapas ou versões do sistema.
+precisa ser identificade de forma visual e tecnica
+
+* versionamento
+
+V0.1.0 
+V0.2.0 
+v0.3.0
+v1.0.0
+
+# versionamento semantico
+v    1   -   0   -   0 
+#  major - minor - patch
+-----------------------------------------
+
+Milestone -> feito/marco (equivale a sprint)
+issues -> tarefa (equivale a task)
+
+
+
+
